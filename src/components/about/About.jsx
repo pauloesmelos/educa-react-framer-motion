@@ -4,7 +4,7 @@ import AboutImage from "../../assets/about.jpg";
 const About = () => {
   return (
     <section className="pt-24 w-full" id="about">
-        <div className="w-full max-w-[1100px] mx-auto xl:px-0 px-6">
+        <div className="w-full max-w-[1200px] mx-auto xl:px-0 px-6">
             <div className="w-full grid md:grid-cols-2 gap-16 place-items-center">
                 <div>
                     <img
@@ -28,7 +28,7 @@ const About = () => {
                         Perspiciatis eius animi alias nam, sed expedita est.
                     </p>
                     <div>
-                        <button className="bg-gradient-to-r from-[#004d66] to-[#008080] text-white
+                        <button className="w-full md:w-[300px] bg-gradient-to-r from-[#004d66] to-[#008080] text-white
                         font-semibold px-16 py-3 hover:opacity-80 hover:scale-[1.07] ease-linear">
                             Know More
                         </button>

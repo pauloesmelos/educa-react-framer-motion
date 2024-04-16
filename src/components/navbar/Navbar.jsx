@@ -1,14 +1,19 @@
 import React from 'react';
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-scroll";
+import Mobile from './mobile/Mobile';
 
 const Navbar = () => {
+  const [mobile, setMobile] = React.useState(false);
+  const handleClick = () => {
+    setMobile(e => !e);
+  }
   return (
     <header className="w-full">
-        <nav className="w-full max-w-[1100px] mx-auto px-6 xl:px-0 py-4">
+        <nav className="w-full max-w-[1200px] mx-auto px-6 xl:px-0 py-4">
             <div className="w-full flex justify-between items-center">
                 <div>
-                    <h1 className="text-2xl font-bold text-teal cursor-pointer">EDUCA EAD</h1>
+                    <h1 className="text-3xl font-bold text-teal cursor-pointer">EDUCA EAD</h1>
                 </div>
                 <div className="hidden md:flex">
                     <ul className="flex items-center gap-4 font-semibold">
@@ -46,15 +51,16 @@ const Navbar = () => {
                 </div>
                 <div className="hidden md:flex">
                     <button className="border border-black font-bold px-6 py-2 rounded-md
-                    hover:bg-black hover:text-slate-100 duration-200">
+                    hover:opacity-70 duration-200">
                         Sign Up
                     </button>
                 </div>
-                <div className="flex md:hidden">
+                <div onClick={handleClick} className="flex md:hidden">
                     <IoMenu className="text-teal hover:text-gray-600 cursor-pointer" size={35} />
                 </div>
             </div>
         </nav>
+        <Mobile mobile={mobile} setMobile={setMobile} />
     </header>
   )
 }

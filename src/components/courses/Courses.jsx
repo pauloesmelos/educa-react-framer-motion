@@ -6,7 +6,7 @@ const Courses = () => {
   
   return (
     <section className="w-full pt-24" id="courses">
-        <div className="w-full max-w-[1100px] mx-auto px-6 xl:px-0">
+        <div className="w-full max-w-[1200px] mx-auto px-6 xl:px-0">
             <div className="w-full">
                 <div className="flex flex-col gap-4">
                     <h1 className="font-bold text-4xl text-center">
@@ -19,7 +19,7 @@ const Courses = () => {
                         doloribus.
                     </p>
                 </div>
-                <div className="flex justify-center items-center gap-6 pt-14">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-6 pt-14">
                     {categories.map((category, index) => (
                         <Course 
                             key={index * Math.random()}

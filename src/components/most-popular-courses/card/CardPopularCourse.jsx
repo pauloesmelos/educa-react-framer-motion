@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaRegUser, FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaRegUser } from "react-icons/fa";
 const CardPopularCourse = ({ title, description, students, stars, price, image }) => {
-  const truncateDescription = (text) => {
-    console.log(text);
+  const truncateDescription = (text,limit) => {
+    const str = text?.split("").slice(0,limit).join("");
+    return str + "...";
   }
   return (
     <div className="bg-white p-4 h-[400px] flex flex-col gap-4">
@@ -15,7 +16,7 @@ const CardPopularCourse = ({ title, description, students, stars, price, image }
             />
         </div>
         <div>
-            <p className="text-teal">{truncateDescription(description)}</p>
+            <p className="text-teal">{truncateDescription(description,28)}</p>
         </div>
         <div>
             <h4 className="font-bold">{title}</h4>
