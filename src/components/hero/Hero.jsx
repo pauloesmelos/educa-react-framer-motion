@@ -4,7 +4,7 @@ import Logos from './logos/Logos';
 
 const Hero = () => {
   return (
-    <section className="w-full pt-16" id="hero">
+    <section className="w-full pt-32" id="hero">
         <div className="w-full max-w-[1200px] mx-auto px-6 xl:px-0">
             <div className="w-full grid md:grid-cols-2 mx-auto gap-8">
                 <div className="flex flex-col gap-12">
@@ -19,11 +19,11 @@ const Hero = () => {
                     </p>
                     <div className="flex items-center gap-6">
                         <button className="border bg-teal text-white font-bold px-8 py-3 
-                        hover:opacity-80">
+                        hover:opacity-60">
                             Get Started
                         </button>
-                        <button className="border border-black/70 text-black font-bold px-8 py-3 rounded-md
-                        hover:bg-black/70 hover:text-white duration-200">
+                        <button className="border-[3px] border-black/70 text-black/80 font-bold px-8 py-3 rounded-md
+                        hover:bg-black/90 hover:text-white duration-200">
                             Discover
                         </button>
                     </div>

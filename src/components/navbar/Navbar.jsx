@@ -5,12 +5,39 @@ import Mobile from './mobile/Mobile';
 
 const Navbar = () => {
   const [mobile, setMobile] = React.useState(false);
+  const [scrollMenu, setScrollMenu] = React.useState(false);
+  const style = {
+    menu: {
+        active: "w-full fixed z-30 bg-white shadow-lg",
+        notActive: "w-full fixed z-30"
+    },
+    nav: {
+        active: "w-full max-w-[1200px] mx-auto px-5 xl:px-0 py-2",
+        notActive: "w-full max-w-[1200px] mx-auto px-5 xl:px-0 py-6"
+    }
+  }
   const handleClick = () => {
     setMobile(e => !e);
   }
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+        if(window.scrollY > 0) {
+            setScrollMenu(true);
+        }
+        else {
+            setScrollMenu(false);
+        }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
   return (
-    <header className="w-full">
-        <nav className="w-full max-w-[1200px] mx-auto px-6 xl:px-0 py-4">
+    <header className={scrollMenu ? style.menu.active : style.menu.notActive}>
+        <nav className={scrollMenu ? style.nav.active : style.nav.notActive}>
             <div className="w-full flex justify-between items-center">
                 <div>
                     <h1 className="text-3xl font-bold text-teal cursor-pointer">EDUCA EAD</h1>

@@ -123,3 +123,30 @@ export const courses = [
     },
 
 ]
+export const accordion = [
+    {
+        id: 0,
+        title: "What is Educate?",
+        answer: "The best platform of education in the Americas. Join thousands of learners who are transforming their lives through our comprehensive and engaging courses. Whether you're looking to expand your skills, advance your career, or explore new interests, we have something for everyone. "
+    },
+    {
+        id: 1,
+        title: "What can I learn from Educate?",
+        answer: "You can learn through video, books, PDFs and classroom."
+    },
+    {
+        id: 2,
+        title: "Can I teach on Educate?",
+        answer: "Sign up in our newsletter for the next interview. Stay updated on the latest industry insights, expert tips, and exclusive content delivered straight to your inbox. Don't miss out on this opportunity to level up your knowledge and stay ahead of the curve."
+    },
+    {
+        id: 3,
+        title: "What is included in my Educa membership?",
+        answer: "All benefits plus 24/7 support and live assistance. Experience unparalleled convenience and peace of mind with round-the-clock support from our dedicated team. Whether you have a question, need technical assistance, or simply want guidance, our live support team."
+    },
+    {
+        id: 4,
+        title: "Where are you from",
+        answer: "We are from Brazil."
+    },
+]
