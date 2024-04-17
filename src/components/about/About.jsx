@@ -16,7 +16,7 @@ const About = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-6">
-                    <h1 className="font-bold text-4xl md:max-w-[350px]">
+                    <h1 className="font-bold text-2xl md:text-4xl max-w-[250px] md:max-w-[350px]">
                         We provide the best
                         {" "}
                         <ReactTyped

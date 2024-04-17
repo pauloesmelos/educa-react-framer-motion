@@ -11,7 +11,7 @@ const Logos = () => {
                 </span>
             </h3>
         </div>
-        <div className="flex justify-between items-center pt-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 gap-5">
             {logos.map((img,index) => (
                 <div key={index * Math.random()}>
                     <img 
