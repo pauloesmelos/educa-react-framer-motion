@@ -2,8 +2,10 @@ import React from 'react';
 
 const Course = ({ title, icon, text }) => {
   return (
-    <div className="w-full md:w-[210px] bg-white px-16 py-6 flex flex-col justify-center items-center gap-4
-    rounded-md hover:bg-slate-200 cursor-pointer">
+    <div 
+    className="w-full md:w-[210px] bg-white px-16 py-6 flex flex-col justify-center items-center gap-4
+    rounded-md hover:bg-slate-200 cursor-pointer lg:hover:scale-110 duration-300 shadow-md"
+    >
         <div className="text-teal text-3xl text-center">
             {icon}
         </div>

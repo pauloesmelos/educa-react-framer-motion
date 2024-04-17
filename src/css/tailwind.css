@@ -7,3 +7,6 @@
         @apply bg-slate-100
     }
 }
+.my-animate {
+    transition: all 0.3s;   /* resolveu o bug do "lag" do framer motion*/
+}

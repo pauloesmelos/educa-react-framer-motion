@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import { categories } from '../../api/API';
 import Course from './card/Course';
@@ -19,21 +19,25 @@ const Courses = () => {
                         doloribus.
                     </p>
                 </div>
-                <motion.div 
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: .4 }}
-                className="flex flex-col md:flex-row justify-center items-center gap-6 pt-14"
-                >
-                    {categories.map((category, index) => (
-                        <Course 
-                            key={index * Math.random()}
-                            title={category.title}
-                            icon={category.icon}
-                            text={category.text}
-                        />
-                    ))}
-                </motion.div>
+                <AnimatePresence>
+                    <motion.div 
+                    className="flex flex-col md:flex-row justify-center items-center gap-6 pt-14 
+                    my-animate"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0 }}
+
+                    >
+                        {categories.map((category, index) => (
+                            <Course 
+                                key={index * Math.random()}
+                                title={category.title}
+                                icon={category.icon}
+                                text={category.text}
+                            />
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     </section>

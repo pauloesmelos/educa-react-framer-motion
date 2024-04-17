@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutImage from "../../assets/about.jpg";
+import { ReactTyped } from "react-typed";
 
 const About = () => {
   return (
@@ -15,12 +16,20 @@ const About = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-6">
-                    <h1 className="font-bold text-4xl md:max-w-[300px]">
+                    <h1 className="font-bold text-4xl md:max-w-[350px]">
                         We provide the best
                         {" "}
-                        <span className="text-teal">
-                            online courses
-                        </span>
+                        <ReactTyped
+                            className="text-teal"
+                            strings={[
+                                "online courses",
+                                "online certifications",
+                                "online experiences"
+                            ]} 
+                            typeSpeed={100}
+                            backSpeed={50}
+                            loop
+                        />
                     </h1>
                     <p className="text-slate-500">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit assumenda iste id 
@@ -29,7 +38,7 @@ const About = () => {
                     </p>
                     <div>
                         <button className="w-full md:w-[300px] bg-gradient-to-r from-[#004d66] to-[#008080] text-white
-                        font-semibold px-16 py-3 hover:opacity-80 hover:scale-[1.07] ease-linear">
+                        font-semibold px-16 py-3 animate-kick">
                             Know More
                         </button>
                     </div>
