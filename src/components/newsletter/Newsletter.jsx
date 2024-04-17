@@ -1,5 +1,5 @@
+import { motion } from 'framer-motion';
 import React from 'react';
-
 const Newsletter = () => {
   return (
     <section className="w-full pt-24" id="contact">
@@ -17,7 +17,12 @@ const Newsletter = () => {
                     suscipit possimus quia sint consequatur perferendis voluptate dolor 
                     accusamus provident repellat distinctio officia sed?
                 </p>
-                <div className="flex justify-center items-center pt-4">
+                <motion.div 
+                className="flex justify-center items-center pt-4"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: .4 }}
+                >
                     <input 
                         type="email"
                         placeholder="Your email"
@@ -28,7 +33,7 @@ const Newsletter = () => {
                      py-2 w-[150px] hover:bg-white hover:text-teal duration-150">
                         Subscribe
                     </button>
-                </div>
+                </motion.div>
             </div>
         </div>
     </section>

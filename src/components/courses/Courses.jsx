@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { categories } from '../../api/API';
 import Course from './card/Course';
-
 const Courses = () => {
   
   return (
@@ -19,7 +19,12 @@ const Courses = () => {
                         doloribus.
                     </p>
                 </div>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-6 pt-14">
+                <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: .4 }}
+                className="flex flex-col md:flex-row justify-center items-center gap-6 pt-14"
+                >
                     {categories.map((category, index) => (
                         <Course 
                             key={index * Math.random()}
@@ -28,7 +33,7 @@ const Courses = () => {
                             text={category.text}
                         />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     </section>

@@ -14,10 +14,10 @@ import course6 from "../assets/courses6.jpg";
 import course7 from "../assets/courses7.jpg";
 import course8 from "../assets/courses8.jpg";
 
+import { BsBarChartLine } from "react-icons/bs";
 import { FaLaptopCode } from "react-icons/fa";
 import { GoPencil } from "react-icons/go";
 import { MdOutlineScience } from "react-icons/md";
-import { BsBarChartLine } from "react-icons/bs";
 
 export const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
@@ -146,7 +146,7 @@ export const accordion = [
     },
     {
         id: 4,
-        title: "Where are you from",
+        title: "Where are you from?",
         answer: "We are from Brazil."
     },
 ]

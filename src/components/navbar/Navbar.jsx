@@ -40,45 +40,45 @@ const Navbar = () => {
         <nav className={scrollMenu ? style.nav.active : style.nav.notActive}>
             <div className="w-full flex justify-between items-center">
                 <div>
-                    <h1 className="text-3xl font-bold text-teal cursor-pointer">EDUCA EAD</h1>
+                    <h1 className="text-4xl font-bold text-teal cursor-pointer">EDUCA EAD</h1>
                 </div>
                 <div className="hidden md:flex">
-                    <ul className="flex items-center gap-4 font-semibold">
+                    <ul className="flex items-center gap-4 font-semibold text-lg">
                         <Link
                             className="cursor-pointer hover:text-[#999]"
-                            to="home" spy={true} duration={400} smooth={true}
+                            to="home" spy={true} duration={500} smooth={true}
                         >
                             Home
                         </Link>
                         <Link 
                             className="cursor-pointer hover:text-[#999]" 
-                            to="about" spy={true} duration={400} smooth={true}
+                            to="about" spy={true} duration={500} smooth={true}
                         >
                             About
                         </Link>
                         <Link 
                             className="cursor-pointer hover:text-[#999]"
-                            to="courses" spy={true} duration={400} smooth={true}
+                            to="courses" spy={true} duration={500} smooth={true}
                         >
                             Courses
                         </Link>
                         <Link 
                             className="cursor-pointer hover:text-[#999]"
-                            to="teacher" spy={true} duration={400} smooth={true}
+                            to="teacher" spy={true} duration={500} smooth={true}
                         >
                             Teacher
                         </Link>
                         <Link 
                             className="cursor-pointer hover:text-[#999]"
-                            to="contact" spy={true} duration={400} smooth={true}
+                            to="contact" spy={true} duration={500} smooth={true}
                         >
                             Contact
                         </Link>
                     </ul>
                 </div>
                 <div className="hidden md:flex">
-                    <button className="border border-black font-bold px-6 py-2 rounded-md
-                    hover:opacity-70 duration-200">
+                    <button className="border border-emerald-400 bg-emerald-400 font-bold px-8 py-2 rounded-md
+                    duration-200 text-lg hover:bg-emerald-500">
                         Sign Up
                     </button>
                 </div>

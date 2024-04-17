@@ -6,7 +6,7 @@ const CardPopularCourse = ({ title, description, students, stars, price, image }
     return str + "...";
   }
   return (
-    <div className="bg-white p-4 h-[400px] flex flex-col gap-4">
+    <div className="bg-white p-4 h-[450px] flex flex-col gap-4">
         <div>
             <img 
                 className="object-cover" 
